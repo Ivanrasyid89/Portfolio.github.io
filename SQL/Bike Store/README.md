@@ -4,6 +4,10 @@ This project focuses on analyzing various aspects of the Bike Store's sales data
 
 https://www.kaggle.com/datasets/dillonmyrick/bike-store-sample-database
 
+## Problem Statement
+The bicycle company experienced declining sales in certain months and product categories.
+Management struggles to understand sales trends, the contribution of each product, brand, category, customer segmentation, store performance, and staff performance. Therefore, making strategic decisions regarding inventory, promotions, and stock management was difficult.
+
 ## Entity Relationship Diagram
 ![ERD](https://github.com/user-attachments/assets/9083e583-a518-4b47-87d6-600d9445f100)
 

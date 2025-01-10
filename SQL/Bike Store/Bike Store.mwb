@@ -44,16 +44,21 @@ ALTER TABLE staffs MODIFY manager_id INT;
 /* Formulating Business Questions */
 -- What are the top 10 products by sales volume?
 SELECT 
-	p.product_name, 
+    YEAR(o.order_date) AS sales_year,
+    p.product_name, 
     SUM(oi.quantity) AS total_quantity_sold
 FROM 
-	order_items oi
+    order_items oi
 JOIN 
-	products p ON oi.product_id = p.product_id
+    products p ON oi.product_id = p.product_id
+JOIN 
+    orders o ON oi.order_id = o.order_id
 GROUP BY 
-	p.product_name
+    sales_year, 
+    p.product_name
 ORDER BY 
-	total_quantity_sold DESC
+    sales_year, 
+    total_quantity_sold DESC
 LIMIT 10;
 
 -- Which brands contribute the most to overall sales revenue?
@@ -112,13 +117,38 @@ ORDER BY
     number_of_customers DESC;
 
 -- Which products have a price higher than the average product price?
-SELECT
-	product_name,
-    list_price
-FROM
-	products
-WHERE
-	list_price > (SELECT AVG(list_price) FROM products);
+WITH avg_price_per_year AS (
+    SELECT 
+        YEAR(o.order_date) AS sales_year,
+        AVG(p.list_price) AS avg_price
+    FROM 
+        products p
+    JOIN 
+        order_items oi ON p.product_id = oi.product_id
+    JOIN 
+        orders o ON oi.order_id = o.order_id
+    GROUP BY 
+        YEAR(o.order_date)
+)
+SELECT 
+    YEAR(o.order_date) AS sales_year,
+    p.product_name,
+    p.list_price,
+    a.avg_price
+FROM 
+    products p
+JOIN 
+    order_items oi ON p.product_id = oi.product_id
+JOIN 
+    orders o ON oi.order_id = o.order_id
+JOIN 
+    avg_price_per_year a ON YEAR(o.order_date) = a.sales_year
+WHERE 
+    p.list_price > a.avg_price
+GROUP BY 
+    sales_year, p.product_name, p.list_price, a.avg_price
+ORDER BY 
+    sales_year, p.list_price DESC;
 
 -- What is the average sales revenue per product category?
 WITH

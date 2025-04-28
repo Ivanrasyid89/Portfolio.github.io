@@ -1,8 +1,6 @@
 # Bike Store 
 ## Overview
-This project focuses on analyzing various aspects of the Bike Store's sales data, customer behavior, and staff/store performance.  Data can be accessed on the page address:
-
-https://www.kaggle.com/datasets/dillonmyrick/bike-store-sample-database
+This project focuses on analyzing various aspects of the Bike Store's sales data, customer behavior, and staff/store performance. 
 
 ## Problem Statement
 The bicycle company experienced declining sales in certain months and product categories.

@@ -1,9 +1,7 @@
 # Sentiment Analysis - Netflix Review
 
 ## Overview
-This project analyzes and cleans over 10.000 Netflix user reviews from the Google Play Store. Data can be accessed on the page address:
-
-https://www.kaggle.com/datasets/ashishkumarak/netflix-reviews-playstore-daily-updated
+This project analyzes and cleans over 10.000 Netflix user reviews from the Google Play Store.
 
 ## Problem Statement
 Netflix, as a leading streaming service, receives millions of user reviews from its global customer base. These reviews offer valuable insights into user satisfaction, product performance, and areas for improvement. However, manually processing such a vast amount of textual data is inefficient and can lead to missed opportunities to address recurring issues or to improve customer experience. Therefore, Netflix needs an automated solution to categorize user feedback into actionable sentiments (positive, negative, neutral), providing a scalable way to understand customer needs and prioritize improvements.

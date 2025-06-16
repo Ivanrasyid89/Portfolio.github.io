@@ -5,7 +5,7 @@ This project focuses on building a machine-learning model to classify mobile pho
 ## Problem Statement
 The smartphone company is highly competitive and pricing strategies play a crucial role in maximizing market share and profitability. Many customers consider price as a significant factor when purchasing a smartphone, and the ability to predict the price range of new models can guide product positioning and marketing strategies. A challenge arises in identifying how a smartphone's technical specifications (e.g., RAM, battery, processor) relate to its price range. By predicting the price range using these specifications, the company can improve targeted strategies for different market segments and offer better-priced products.
 
-## Table of Content
+## Table of Contents
 1. [Project Overview](#overview)
 2. [Data](#data)
 3. [Data Processing](#data-processing)
@@ -13,6 +13,8 @@ The smartphone company is highly competitive and pricing strategies play a cruci
 5. [Feature Engineering](#feature-engineering)
 6. [Modeling](#modeling)
 7. [Model Evaluation](#model-evaluation)
+8. [Results](#results).
+9. [Conclusion](#conclusion).
 
 ## Data
 The dataset contains the specifications of mobile phones along with their price range category. It includes the following columns:
@@ -45,13 +47,14 @@ The dataset contains the specifications of mobile phones along with their price 
 
 ## Exploratory Data Analysis
 ### Distribution of Features
-![image](https://github.com/user-attachments/assets/5641bdd1-2b60-4e70-8a48-eba0e633e383)
-![image](https://github.com/user-attachments/assets/86c54759-310e-4c87-b482-15dd96c65f5a)
+![image](https://github.com/user-attachments/assets/eff82149-8801-4e26-8b4c-a6ac7e6ea623)
+![image](https://github.com/user-attachments/assets/fdcacdbe-64d3-484d-9101-20f190ddad63)
+
+### Distribution of Labels
+![image](https://github.com/user-attachments/assets/63ad7dba-86c0-42be-9923-e1125c0e83d2)
 
 ### Correlation Matrix
-![image](https://github.com/user-attachments/assets/154bc907-ec48-4a45-8c13-23dc933b4c4e)
-
-Based on the correlation plot, we know that the correlation of each feature can impact for target (price range).
+![image](https://github.com/user-attachments/assets/da0b2937-06f3-4d63-ad54-deb931dfac5a)
 
 ## Feature Engineering
 - Normalization: Scaled numerical features to have zero mean and unit variance
@@ -59,11 +62,11 @@ Based on the correlation plot, we know that the correlation of each feature can 
 
 ## Modeling
 ### Model
-- Neural Network
-- XGBoost
+- Logistic Regression
+- Decision Tree
+- Random Forest
 
 ### Hyperparameter Tuning
-- Adam Optimizer
 - Grid Search CV
 
 ## Model Evaluation
@@ -73,25 +76,16 @@ Based on the correlation plot, we know that the correlation of each feature can 
 - Recall
 - F1-Score
 
-### Results
+## Results
 | Model                        | Accuracy | Precision | Recall  | F1-Score | ROC AUC Score |
 |------------------------------|----------|-----------|---------|----------|---------------|
-| Neural Network | 0.945   | 0.945     | 0.945   | 0.944    | 0.996         |
-| XGBoost      | 0.907    | 0.908     | 0.907   | 0.907    | 0.991         |
+| Logistic Regression | 0.9725   | 0.9725     | 0.9724   | 0.9724    | 0.9989         |
+| Decision Tree      | 0.8425    | 0.8416     | 0.8431   | 0.8422    | 0.9535         |
+| Random Forest      | 0.8325    | 0.8261     | 0.8332   | 0.8279    | 0.9556         |
 
-- Based on the comparison of the two accuracies of the Neural Network and XGBoost models. Neural Network accuracy is higher than XGBoost. This indicates that this model can overcome the complexity of the data.
-- Pricing new product: When a company is about to launch a new product, this model can predict the price range based on its features. This will certainly help the company in making the right decision regarding the smartphone product it will launch.
-- Market Segmentation:  In the product launch process, companies are required to focus on the most dominant features like “battery_power, px_height, px_width, and ram” in designing their products for different customers. In this case, the company should also consider the target customers such as the lower class, middle class, and upper class.
-
-## Business Impact
-### Optimized Pricing Strategy
-- Companies can price at the upper end of the price range to maximize profits on high-end smartphones that have advanced features.
-- Mid-class and low-class phones can be attractively priced based on corresponding features to target price-sensitive consumers.
-
-### Product Development
-- Companies can improve key features like “battery_power, px_height, px_width, and ram” on high-end phones to maximize profits.
-- On low-class and mid-class phones, companies can increase “battery_power or ram” to differentiate themselves from high-end phones.
-- Understanding the most dominant features will help avoid over-engineering the product to be launched, allowing the company to compete while ensuring production cost efficiency.
+- Based on the comparison of the three model accuracies above. The accuracy of Logistic Regression is higher than Decision Tree and Random Forest.
+- Pricing of new products: When a company is about to launch a new product, this model can predict the price range based on its features. This will certainly help the company in making the right decision regarding the smartphone product that it will launch.
+- Market Segmentation:  In the product launch process, companies are required to focus on the most dominant features such as “battery_power, px_height, px_width, and ram” in designing their products for different customers. In this case, the company should also consider the target customers such as low-end, middle-end, upper-middle-end, and high-end.
 
 ## Conclusion
-The Neural Network model can be applied to predict the price range of mobile phones with an accuracy of 94.50% because its performance is excellent. The identification of dominant features can be used as a guideline in product development and costing strategies. By understanding the important features, companies can make data-driven decisions for product optimization, customer segmentation, and increasing profits.
+The Logistic Regression model can be applied to predict the price range of mobile phones with 97.25% accuracy due to its excellent performance. The identification of dominant features can be used as a guideline in product development and pricing strategy. By understanding the important features, companies can make data-driven decisions for product optimization, customer segmentation, and increasing profits.

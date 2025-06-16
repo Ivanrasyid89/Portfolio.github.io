@@ -13,8 +13,8 @@ The smartphone company is highly competitive and pricing strategies play a cruci
 5. [Feature Engineering](#feature-engineering)
 6. [Modeling](#modeling)
 7. [Model Evaluation](#model-evaluation)
-8. [Results](#results).
-9. [Conclusion](#conclusion).
+8. [Results](#results)
+9. [Conclusion](#conclusion)
 
 ## Data
 The dataset contains the specifications of mobile phones along with their price range category. It includes the following columns:

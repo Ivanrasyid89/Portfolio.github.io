@@ -41,5 +41,10 @@ This project was organized by Yandex Hackathon, where I attended the "Linear Mod
 5. Prediction
 
 ## 📈 Results ##
-
-## 💡 Insights ##
+| Model                 | Best Cross-Validation Score (%) | R² Score on Test Data (%) |
+| :-------------------- | :-----------------------------: | :-----------------------: |
+| **Linear Regression** |            **75.41**            |         **80.54**         |
+| Ridge Regression      |              75.41              |           80.54           |
+| Lasso Regression      |              73.20              |           75.19           |
+| ElasticNet            |              74.76              |           77.84           |
+| SGD Regression        |              71.56              |           78.06           |

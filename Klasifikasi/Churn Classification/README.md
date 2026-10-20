@@ -13,6 +13,10 @@ This project analyzes how many customers have stopped using the service, examine
 3. Modelling & Validation
 4. Business Evaluation
 
+## Algorithms
+1. Logistic Regression
+2. Random Forest Classifier
+
 ## Key Findings
 1. Churn in the dataset reached 29.6%, with 74 customers classified as churned out of a total of 250 customers
 2. The number of transactions was the strongest predictor of behavior among the variables tested in the univariate analysis

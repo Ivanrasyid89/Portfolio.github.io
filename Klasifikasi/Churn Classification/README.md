@@ -4,8 +4,8 @@ This project analyzes how many customers have stopped using the service, examine
 
 ## Goals
 1. Reduce Customer Churn
-2. Improve Retention & Repeat Usage
-3. Optimize Acquisition Channels
+2. Enhance Loyalty & Re-engagement
+3. Refine Customer Acquisition Channels
 
 ## Methodology
 1. Business Understanding
